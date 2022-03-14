@@ -1,0 +1,9 @@
+.slideShowPic{
+    height:55vh;
+    width:auto;
+    object-fit: cover; object-position: -70%, 0;
+};
+
+.copyrught{
+  position: absolute;  
+};
