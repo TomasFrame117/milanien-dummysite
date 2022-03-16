@@ -10,17 +10,23 @@ function show(){
 }
 
 function navBar(){
-    return `<button onclick="changePage('home')">Home</button>
-            <button onclick="changePage('info')">About us</button>
-            <button onclick="changePage('store')">Shop</button>
-            <button onclick="changePage('cart')">Cart ${model.totalitems}</button>`
+    return `
+        
+        <div class="navBarStyle">
+            <button class="navBarButton" onclick="changePage('home')">Home</button>
+            <button class="navBarButton" onclick="changePage('info')">About us</button>
+            <button class="navBarButton" onclick="changePage('store')">Shop</button>
+        </div>
+        <div class="checkout">
+            <button class="cartBotton" onclick="changePage('cart')">Cart (${model.totalitems}) ${model.totalprice}kr</button>
+        </div>`
 }
 
 function changePage(page){
     model.currentpage = page;
     updateView();
 }
-
+updateView();
 function updateView(){
     const page = model.currentpage;
     if (page=='home') viewHomePage();
@@ -30,18 +36,21 @@ function updateView(){
 }
 
 function viewHomePage(){
-     html=`<h2>Welkome to Milanien! Calmest styles in fashion!</h2>
+     html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
      `
     html += `<div class="slideShowBox">
-                <img class="slideShowPic" src="/bilder/IMG_2709 (1).jpg" style="width:100%"/>
+                <img class="slideShowPic" name="slide" src="/bilder/IMG_2709 (1).jpg" style="width:100%"/>
             </div>`
     html += `<div class="catagoryBox">
                 <div class="genderBox">
-                    <H1 style="bold" onclick="viewShopPage()">him<h1>
+                    <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
+                    <img class="imggenderbox" src="/bilder/IMG_1142.jpeg" alt="card img cap"/>
                 </div>
                 <div class="genderbox">
-                    <H1 style="bold" onclick="viewShopPage()">Her<h1>
+                    <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
+                    <img class="imggenderbox" src="https://cdn.lookastic.com/looks/grey-coat-white-hoodie-grey-sweatpants-large-30967.jpg"  alt="card img cap"/>
                 </div>
+                
             </div>`
     html += `<footer class="copyrught">copypright© 2022 MelanienGroup</footer>`
 
@@ -52,21 +61,28 @@ function viewHomePage(){
 function viewAboutusPage(){
     html=`<h1>hi</h1>`
 
+    html +=`<div> notat: jobb med kategorier og oppdatere modellen med flere gjenstander. finn ut av metoden du vil bruke på gender.</div>`
+
     model.view = html;
     show();
 }
 
-function viewShopPage(){
+function viewShopPage(gender){
     let html = ``;
     
+    
     for(let i = 0; i < model.products.length; i++){
-        let first = i % 3 == 0 ? 'first' : '';
-        html += `
-            <div porductBox="cell ${first}">
-                 ${model.products[i].name} <br>
+        let first = i % 2 == 0 ? 'first' : '';
+       
+            //modulus
+            html += `
+             <div class="${first}">
+                ${model.products[i].name} <br>
+                <div onload src="./bilder/produkter/${model.products[i].image}"></div>
                 price: ${model.products[i].price}kr <button onclick="addToCart(${i})"> Buy</button></br>
-                <tt> instock: ${model.products[i].instock}<tt>
-                <hr>`
+                <div> instock: ${model.products[i].instock}</div>
+            </div>     <hr>`
+        
     }
     model.view = html;
     show();
@@ -76,9 +92,14 @@ function viewCartPage(){
     html =`<h2>Shoping Cart</h2>
     
     `
+    model.totalprice = 0;
+
     for(let i = 0; i<model.shopingcart.length; i++) {
-        html=` item: ${model.shopingcart[i]}<br/>
+        html +=` <br>item: ${model.shopingcart[i].name}<br/>
+        price: ${model.shopingcart[i].price}
+        
         `
+        model.totalprice += model.shopingcart[i].price;
     }
 
     html +=`<hr/>total items: ${model.totalitems} <span> total price: ${model.totalprice}kr</span><br/>`
