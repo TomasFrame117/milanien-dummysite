@@ -17,11 +17,6 @@ function navBar(){
             <button class="navBarButton" onclick="changePage('info')">About us</button>
             <button class="navBarButton" onclick="changePage('store')">Shop</button>
         </div>
-
-        <div class="navLogo">
-            <img  src="/bilder/logo/LogoHighresEnjoyLife.png", style="width: 100%"/>
-        </div>
-
         <div class="checkout">
             <button class="cartBotton" onclick="changePage('cart')">Cart (${model.totalitems}) ${model.totalprice}kr</button>
         </div>`
@@ -41,27 +36,28 @@ function updateView(){
 }
 
 function viewHomePage(){
-     html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
-     `
-    html += `<div class="slideShowBox">
-                <img class="slideShowPic" name="slide" src="/bilder/IMG_2709 (1).jpg" style="width:100%"/>
-            </div>`
-    html += `<div class="catagoryBox">
-                <div class="genderBox">
-                    <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
-                    <img class="imggenderbox" src="/bilder/Promo/him.png" alt="card img cap"/>
-                </div>
-                <div class="genderbox">
-                    <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
-                    <img class="imggenderbox" src="/bilder/Promo/milanienher-removebg-preview.png"  alt="card img cap"/>
-                </div>
-                
-            </div>`
-    html += `<footer class="copyrught">copypright© 2022 MelanienGroup</footer>`
+    html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
+    `
+   html += `<div class="slideShowBox">
+               <img class="slideShowPic" name="slide" src="/bilder/IMG_2709 (1).jpg" style="width:100%"/>
+           </div>`
+   html += `<div class="catagoryBox">
+               <div class="genderBox">
+                   <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
+                   <img class="imggenderbox" src="/bilder/Promo/him.png" alt="card img cap"/>
+               </div>
+               <div class="genderbox">
+                   <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
+                   <img class="imggenderbox" src="/bilder/Promo/milanienher-removebg-preview.png"  alt="card img cap"/>
+               </div>
+               
+           </div>`
+   html += `<footer class="copyrught">copypright© 2022 MelanienGroup</footer>`
 
-     model.view = html;
-    show();
+    model.view = html;
+   show();
 }
+
 
 function viewAboutusPage(){
     html=`<h1>hi</h1>`
@@ -73,23 +69,20 @@ function viewAboutusPage(){
 }
 
 function viewShopPage(gender){
-    let html = `<div class="productGrid">` 
-    
-    
+    let html = `<div class="productGrid">`;
     for(let i = 0; i < model.products.length; i++){
-               
+        let first = i % 2 == 0 ? 'first' : '';
+       
             //modulus
             html += `
-             <div class="productBox">
+             <div class="${first}">
                 ${model.products[i].name} <br>
-                <img src="${model.products[i].image}" style="height:30vh"/></br>
+                <img src="/bilder/produkter/${model.products[i].image}"/>
                 price: ${model.products[i].price}kr <button onclick="addToCart(${i})"> Buy</button></br>
                 <div> instock: ${model.products[i].instock}</div>
             </div>     <hr>`
-        
     }
-    html +=`</div>`
-
+    html += `</div>`;
     model.view = html;
     show();
 }
@@ -101,7 +94,7 @@ function viewCartPage(){
     model.totalprice = 0;
 
     for(let i = 0; i<model.shopingcart.length; i++) {
-        html +=` <br>item: ${model.shopingcart[i].name} <img src="${model.products[i].image}"/><br/>
+        html +=` <br>item: ${model.shopingcart[i].name}<br/>
         price: ${model.shopingcart[i].price}
         
         `
