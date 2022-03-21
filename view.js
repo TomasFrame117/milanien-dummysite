@@ -71,13 +71,12 @@ function viewAboutusPage(){
 function viewShopPage(gender){
     let html = `<div class="productGrid">`;
     for(let i = 0; i < model.products.length; i++){
-        let first = i % 2 == 0 ? 'first' : '';
        
             //modulus
             html += `
-             <div class="${first}">
+             <div class="productBox">
                 ${model.products[i].name} <br>
-                <img src="/bilder/produkter/${model.products[i].image}"/>
+                <img src="${model.products[i].image}" style="width:100%"/>
                 price: ${model.products[i].price}kr <button onclick="addToCart(${i})"> Buy</button></br>
                 <div> instock: ${model.products[i].instock}</div>
             </div>     <hr>`
