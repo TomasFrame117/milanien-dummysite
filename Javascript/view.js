@@ -17,9 +17,13 @@ function navBar(){
             <button class="navBarButton" onclick="changePage('info')">About us</button>
             <button class="navBarButton" onclick="changePage('store')">Shop</button>
         </div>
+
+        <div class="navLogo">
+            <img  src="/bilder/logo/LogoHighresEnjoyLife.png", style="width: 100%"/>
+        </div>
+
         <div class="checkout">
             <button class="cartBotton" onclick="changePage('cart')">Cart (${model.totalitems}) ${model.totalprice}kr</button>
-
         </div>`
 }
 
@@ -69,17 +73,14 @@ function viewAboutusPage(){
 }
 
 function viewShopPage(gender){
-    let html = ``;
+    let html = `<div class="productGrid">` 
     
     
     for(let i = 0; i < model.products.length; i++){
-        let first = i % 2 == 0 ? 'first' : '';
-        
-        
-       
+               
             //modulus
             html += `
-             <div class="${first}">
+             <div class="productBox">
                 ${model.products[i].name} <br>
                 <img src="${model.products[i].image}" style="height:30vh"/></br>
                 price: ${model.products[i].price}kr <button onclick="addToCart(${i})"> Buy</button></br>
@@ -87,6 +88,8 @@ function viewShopPage(gender){
             </div>     <hr>`
         
     }
+    html +=`</div>`
+
     model.view = html;
     show();
 }

@@ -1,7 +1,7 @@
 const model = {
 
     view: '',
-    currentpage: 'store',
+    currentpage: 'home',
     totalitems: 0,
     totalprice: 0,
     shopingcart: [],
@@ -44,8 +44,26 @@ const model = {
             
         },
         {
-            name: 'Milanien Cap',
+            name: 'New item 1',
+            price: 349,
+            instock: 10,
+            info: 'Fin genser, laget i merino Ull',
+            gender: 'him' || 'her',
+            image: "/bilder/produkter/swedder_unisex_FRONT.png",
+            
+        },
+        {
+            name: 'Milanien bennie',
             price: 149,
+            instock: 10,
+            info: 'Fin genser, laget i merino Ull',
+            gender: 'him' || 'her',
+            image: "/bilder/produkter/swedder_unisex_FRONT.png",
+            
+        },
+        {
+            name: 'Milanien Cap',
+            price: 249,
             instock: 20,
             info: 'Olabukse',
             him: 'him', 

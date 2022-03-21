@@ -8,8 +8,10 @@
   position: absolute;  
 }
 
-div.first{
-  background-color: rgb(238, 237, 237);
+.productBox{
+  background-color: rgb(255, 255, 255);
+  height:30vh;
+  width:15vw;
 }
 
 .navBarButton{
@@ -37,6 +39,11 @@ align-items: stretch;
 flex-wrap: nowrap;
 justify-content: space-between;
 flex-direction: row;
+}
+
+.navLogo{
+  height:10vh;
+  width: 20vh;
 }
 
 .checkout{
