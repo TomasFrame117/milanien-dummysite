@@ -36,26 +36,26 @@ function updateView(){
 }
 
 function viewHomePage(){
-    html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
-    `
-   html += `<div class="slideShowBox">
-               <img class="slideShowPic" name="slide" src="/bilder/IMG_2709 (1).jpg" style="width:100%"/>
-           </div>`
-   html += `<div class="catagoryBox">
-               <div class="genderBox">
-                   <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
-                   <img class="imggenderbox" src="/bilder/Promo/him.png" alt="card img cap"/>
-               </div>
-               <div class="genderbox">
-                   <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
-                   <img class="imggenderbox" src="/bilder/Promo/milanienher-removebg-preview.png"  alt="card img cap"/>
-               </div>
-               
-           </div>`
-   html += `<footer class="copyrught">copypright© 2022 MelanienGroup</footer>`
+     html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
+     `
+    html += `<div class="slideShowBox">
+                <img class="slideShowPic" name="slide" src="/bilder/IMG_2709 (1).jpg" style="width:100%"/>
+            </div>`
+    html += `<div class="catagoryBox">
+                <div class="genderBox">
+                    <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
+                    <img class="imggenderbox" src="/bilder/Promo/him.png" alt="card img cap"/>
+                </div>
+                <div class="genderbox">
+                    <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
+                    <img class="imggenderbox" src="/bilder/Promo/milanienher-removebg-preview.png"  alt="card img cap"/>
+                </div>
+                
+            </div>`
+    html += `<footer class="copyrught">copypright© 2022 MelanienGroup</footer>`
 
-    model.view = html;
-   show();
+     model.view = html;
+    show();
 }
 
 
