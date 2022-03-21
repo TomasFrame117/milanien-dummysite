@@ -1,0 +1,83 @@
+.slideShowPic{
+    height:55vh;
+    width:auto;
+    object-fit: cover; object-position: -70%, 0;
+}
+
+.copyrught{
+  position: absolute;  
+}
+
+div.first{
+  background-color: rgb(238, 237, 237);
+}
+
+.navBarButton{
+  border: none;
+  height: auto;
+  width: 12vh;
+  padding: 2vh;
+  text-align: center;
+  position: auto;
+  background-color: aliceblue;
+  margin: 5px;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+
+.navBarButton:hover{
+  color: azure;
+  border-color: black;
+
+}
+
+.navBarStyle{
+display: flex;
+align-items: stretch;
+flex-wrap: nowrap;
+justify-content: space-between;
+flex-direction: row;
+}
+
+.checkout{
+display: flex;
+
+}
+.cartBotton{
+  border: none;
+  border-radius: 5px;
+  height: 5vh;
+  width: auto;
+  margin-right: 15px;
+}
+
+.catagoryBox{
+  display: flex;
+  position:center;
+  justify-content: center;
+}
+
+.genderbox{
+  height: auto;
+  width: auto;
+  padding: auto;
+  justify-content: center;
+}
+
+.imggenderbox{
+  display: block;
+  height: 40vh;
+  width: 70vh;
+  object-fit: cover; object-position: top;
+  margin: 1ch;
+  justify-content: center;
+}
+
+.categoryName{
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
