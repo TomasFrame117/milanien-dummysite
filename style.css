@@ -81,3 +81,7 @@ display: flex;
   background-repeat: no-repeat;
 
 }
+
+.productGrid{
+  display:flex;
+}

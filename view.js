@@ -68,9 +68,7 @@ function viewAboutusPage(){
 }
 
 function viewShopPage(gender){
-    let html = ``;
-    
-    
+    let html = `<div class="productGrid">`;
     for(let i = 0; i < model.products.length; i++){
         let first = i % 2 == 0 ? 'first' : '';
        
@@ -82,8 +80,8 @@ function viewShopPage(gender){
                 price: ${model.products[i].price}kr <button onclick="addToCart(${i})"> Buy</button></br>
                 <div> instock: ${model.products[i].instock}</div>
             </div>     <hr>`
-        
     }
+    html += `</div>`;
     model.view = html;
     show();
 }
