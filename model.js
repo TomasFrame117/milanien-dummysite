@@ -8,12 +8,12 @@ const model = {
 
     products:[
         {
-            name: ' Simple swedder',
+            name: 'Simple swedder',
             price: 349,
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/swedder_unisex_FRONT.png",
+            image: "/bilder/produkter/S3_FRONT.jpg",
             
         },
         {
@@ -22,7 +22,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/classic_swedder_unisex_FRONT.png",
+            image: "/bilder/produkter/S2_FRONT.jpg",
     
             
         },
@@ -32,7 +32,7 @@ const model = {
             instock: 1,
             info: 'Cozy swedder for warmer days, to spread the Milanien way.',
             gender: 'her', 
-            image: "/bilder/produkter/S2.FRONT.jpg",
+            image: "/bilder/produkter/S1_FRONT.jpg",
         },
         {
             name: 'Swedder Ukriane Edition',
@@ -40,7 +40,7 @@ const model = {
             instock: 5,
             info: 'NOTE: All purchases go to donation to the Ukrainian people.',
             gender: 'her' || 'him',
-            image: "/bilder/produkter/US1.FRONT.png",
+            image: "/bilder/produkter/US1_FRONT.png",
             
         },
         {
@@ -49,7 +49,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/S1.FRONT.jpg",
+            image: "/bilder/produkter/S1_FRONT.jpg",
             
         },
         {
@@ -58,7 +58,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/S1.FRONT.jpg",
+            image: "/bilder/produkter/S1_BACK.jpg",
             
         },
         {
@@ -67,7 +67,7 @@ const model = {
             instock: 20,
             info: 'Olabukse',
             him: 'him', 
-            image: "/bilder/produkter/.png",
+            image: "/bilder/produkter/S2_BACK.jpg",
         },
 
     ]
