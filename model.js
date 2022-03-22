@@ -1,7 +1,7 @@
 const model = {
 
     view: '',
-    currentpage: 'home',
+    currentpage: 'store',
     totalitems: 0,
     totalprice: 0,
     shopingcart: [],
@@ -32,15 +32,15 @@ const model = {
             instock: 1,
             info: 'Cozy swedder for warmer days, to spread the Milanien way.',
             gender: 'her', 
-            image: "/bilder/produkter/simple_cropped_Hoodie_MEL_back_FRONT.png",
+            image: "/bilder/produkter/S2.FRONT.jpg",
         },
         {
             name: 'Swedder Ukriane Edition',
             price: 349,
             instock: 5,
-            info: 'Fin genser, laget i merino Ull',
+            info: 'NOTE: All purchases go to donation to the Ukrainian people.',
             gender: 'her' || 'him',
-            image: "./bilder/produkter/classic_swedder_unisex_FRONT.png",
+            image: "/bilder/produkter/US1.FRONT.png",
             
         },
         {
@@ -49,7 +49,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/swedder_unisex_FRONT.png",
+            image: "/bilder/produkter/S1.FRONT.jpg",
             
         },
         {
@@ -58,7 +58,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/swedder_unisex_FRONT.png",
+            image: "/bilder/produkter/S1.FRONT.jpg",
             
         },
         {

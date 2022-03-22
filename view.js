@@ -69,19 +69,25 @@ function viewAboutusPage(){
 }
 
 function viewShopPage(gender){
-    let html = `<div class="productGrid">`;
+    let html = `<div class="product">
+                    <div class="productcard">`;
     for(let i = 0; i < model.products.length; i++){
        
             //modulus
             html += `
              <div class="productBox">
-                ${model.products[i].name} <br>
-                <img src="${model.products[i].image}" style="width:100%"/>
-                price: ${model.products[i].price}kr <button onclick="addToCart(${i})"> Buy</button></br>
-                <div> instock: ${model.products[i].instock}</div>
-            </div>     <hr>`
+                <div class="productBoximg">
+                    <img class="productBoximg" src="${model.products[i].image}"/>
+                </div> <hr/>
+                <div Class="productInfo">
+                    ${model.products[i].name} <br>
+                    <tt>price: ${model.products[i].price}kr<tt> <button onclick="addToCart(${i})"> Buy</button></br>
+                    <tt> instock: ${model.products[i].instock}</tt>
+                </div>
+            </div> </hr>`
     }
-    html += `</div>`;
+    html += `       </div>
+                </div>`;
     model.view = html;
     show();
 }
