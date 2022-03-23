@@ -6,6 +6,8 @@ const model = {
     totalprice: 0,
     shopingcart: [],
 
+    promo: ["url: src='/bilder/Promo/UP2.gif'"],
+
     products:[
         {
             name: 'Simple swedder',
