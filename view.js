@@ -39,7 +39,7 @@ function viewHomePage(){
      html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
      `
     html += `<div class="slideShowBox">
-                <img class="slideShowPic" url="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/UP.gif?raw=true" name="slide" style="width:100%"/>
+                <img class="slideShowPic" src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/UP.gif?raw=true" name="slide" style="width:100%"/>
             </div>`
     html += `<div class="catagoryBox">
                 <div class="genderBox">
