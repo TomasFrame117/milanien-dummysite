@@ -39,7 +39,7 @@ function viewHomePage(){
      html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
      `
     html += `<div class="slideShowBox">
-                <img class="slideShowPic" name="slide" src="/bilder/Promo/UP.gif" style="width:100%"/>
+                <img class="slideShowPic" name="slide" src="/bilder/Promo/UP2.gif" style="width:100%"/>
             </div>`
     html += `<div class="catagoryBox">
                 <div class="genderBox">
@@ -48,11 +48,18 @@ function viewHomePage(){
                 </div>
                 <div class="genderbox">
                     <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
-                    <img class="imggenderbox" src="/bilder/Promo/milanienher-removebg-preview.png"  alt="card img cap"/>
+                    <img class="imggenderbox" src="/bilder/Promo/her1promo.webp"  alt="card img cap"/>
                 </div>
                 
             </div>`
-    html += `<footer class="copyrught">copypright© 2022 MelanienGroup</footer>`
+    html += `<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+               
+                <div class="text-center p-3 border-top border-white">
+      © 2022 Copyright: MelanienGroup As
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+
+    </footer>`
 
      model.view = html;
     show();
@@ -62,7 +69,30 @@ function viewHomePage(){
 function viewAboutusPage(){
     html=`<h1>hi</h1>`
 
-    html +=`<div> notat: jobb med kategorier og oppdatere modellen med flere gjenstander. finn ut av metoden du vil bruke på gender.</div>`
+    html +=`<div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p> 
+  </div>
+    
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 3</h3>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+  </div>`
 
     model.view = html;
     show();

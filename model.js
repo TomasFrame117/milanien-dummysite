@@ -1,7 +1,7 @@
 const model = {
 
     view: '',
-    currentpage: 'store',
+    currentpage: 'home',
     totalitems: 0,
     totalprice: 0,
     shopingcart: [],
