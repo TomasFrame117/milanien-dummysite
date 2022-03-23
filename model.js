@@ -15,7 +15,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/S3_FRONT.jpg",
+            image: "https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/produkter/S3_FRONT.jpg?raw=true",
             
         },
         {
@@ -24,7 +24,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/S2_FRONT.jpg",
+            image: "https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/produkter/S2_FRONT.jpg?raw=true",
     
             
         },
@@ -34,7 +34,7 @@ const model = {
             instock: 1,
             info: 'Cozy swedder for warmer days, to spread the Milanien way.',
             gender: 'her', 
-            image: "/bilder/produkter/S1_FRONT.jpg",
+            image: "https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/produkter/S1_FRONT.jpg?raw=true",
         },
         {
             name: 'Swedder Ukriane Edition',
@@ -51,7 +51,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "/bilder/produkter/S1_FRONT.jpg",
+            image: "https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/produkter/US1_FRONT.png?raw=true",
             
         },
         {

@@ -19,7 +19,9 @@ function navBar(){
         </div>
         <div class="checkout">
             <button class="cartBotton" onclick="changePage('cart')">Cart (${model.totalitems}) ${model.totalprice}kr</button>
-        </div>`
+        </div>
+
+        `
 }
 
 function changePage(page){
@@ -44,11 +46,11 @@ function viewHomePage(){
     html += `<div class="catagoryBox">
                 <div class="genderBox">
                     <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
-                    <img class="imggenderbox" src="/bilder/Promo/him.png" alt="card img cap"/>
+                    <img class="imggenderbox" src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/him.png?raw=true" alt="card img cap"/>
                 </div>
                 <div class="genderbox">
                     <H1 class="categoryName" style="bold" onclick="viewShopPage('her')">Her<h1>
-                    <img class="imggenderbox" src="/bilder/Promo/her1promo.webp"  alt="card img cap"/>
+                    <img class="imggenderbox" src="https://raw.githubusercontent.com/TomasFrame117/milanien-dummysite/main/bilder/Promo/her2promo.webp"  alt="card img cap"/>
                 </div>
                 
             </div>`
@@ -69,8 +71,9 @@ function viewHomePage(){
 function viewAboutusPage(){
     html=`<h1>hi</h1>`
 
-    html +=`<div class="container-fluid p-5 bg-primary text-white text-center">
+    html +=`<div class="container-fluid p-4 text-black text-center">
     <h1>My First Bootstrap Page</h1>
+    <img src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/UP2.gif?raw=true" style="width:70%"/>
     <p>Resize this responsive page to see the effect!</p> 
   </div>
     
@@ -93,6 +96,15 @@ function viewAboutusPage(){
       </div>
     </div>
   </div>`
+
+  html += `<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+               
+                <div class="text-center p-3 border-top border-white">
+      © 2022 Copyright: MelanienGroup As
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+
+    </footer>`
 
     model.view = html;
     show();
@@ -140,6 +152,15 @@ function viewCartPage(){
 
     html += `<hr/>
             <button onclick="GoToCheckOut()">Check Out</button>`
+    
+            html += `<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+               
+                        <div class="text-center p-3 border-top border-white">
+                            © 2022 Copyright: MelanienGroup As This site is just a dummy and most not be mistaken for a real web shop!
+                            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                        </div>
+
+                    </footer>`
 
     model.view= html;
     show();
