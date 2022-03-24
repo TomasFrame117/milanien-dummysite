@@ -42,7 +42,7 @@ const model = {
             instock: 5,
             info: 'NOTE: All purchases go to donation to the Ukrainian people.',
             gender: 'her' || 'him',
-            image: "/bilder/produkter/US1_FRONT.png",
+            image: "https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/produkter/US1_FRONT.png?raw=true",
             
         },
         {
@@ -51,7 +51,7 @@ const model = {
             instock: 10,
             info: 'Fin genser, laget i merino Ull',
             gender: 'him' || 'her',
-            image: "https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/produkter/US1_FRONT.png?raw=true",
+            image: " ",
             
         },
         {
