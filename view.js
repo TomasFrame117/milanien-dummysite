@@ -7,6 +7,21 @@ function show(){
         ${model.view}
     `
     webSite.innerHTML = html;
+
+    html+=`<div class="navBarStyle"> ${footerBar()}</div>`
+}
+
+function footerBar() {
+
+    return`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+               
+    <div class="text-center p-3 border-top border-white">
+        © 2022 Copyright: MelanienGroup As This site is just a dummy and most not be mistaken for a real web shop!
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+
+</footer>`
+
 }
 
 function navBar(){
@@ -54,14 +69,6 @@ function viewHomePage(){
                 </div>
                 
             </div>`
-    html += `<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
-               
-                <div class="text-center p-3 border-top border-white">
-      © 2022 Copyright: MelanienGroup As
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-
-    </footer>`
 
      model.view = html;
     show();
@@ -72,27 +79,26 @@ function viewAboutusPage(){
     html=`<h1>hi</h1>`
 
     html +=`<div class="container-fluid p-4 text-black text-center">
-    <h1>My First Bootstrap Page</h1>
+    <h1>Have a Milanien Day</h1>
     <img src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/UP2.gif?raw=true" style="width:70%"/>
-    <p>Resize this responsive page to see the effect!</p> 
   </div>
     
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-4">
-        <h3>Column 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <h3>We are Milanien</h3>
+        <p>Hello Everyone!</p>
+        <p>We are a small Scandinavian start-up from the heart of Porsgrunn in Norway. We are passionate about developing a quality brand at reasonable prices.</p>
       </div>
       <div class="col-sm-4">
-        <h3>Column 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <h3>Why we started Milanien</h3>
+        <p>Our goal is simple</p>
+        <p>We want to inspire you to enjoy the little things life have to offer. We wanted something that can do that. And thats what we aim for.</p>
       </div>
       <div class="col-sm-4">
-        <h3>Column 3</h3>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <h3>What it means</h3>        
+        <p>"A Milanien a day Keeps the hunhappiness away."</p>
+        <p>Milanien has a bigger meaning for us. The word itself translate to: "everything good in the world". Something we feel is important now a days.</p>
       </div>
     </div>
   </div>`
@@ -116,17 +122,16 @@ function viewShopPage(gender){
     for(let i = 0; i < model.products.length; i++){
        
             //modulus
-            html += `
-             <div class="productBox">
-                <div class="productBoximg">
-                    <img class="productBoximg" src="${model.products[i].image}"/>
-                </div> <hr/>
-                <div Class="productInfo">
-                    ${model.products[i].name} <br>
-                    <tt>price: ${model.products[i].price}kr<tt> <button onclick="addToCart(${i})"> Buy</button></br>
-                    <tt> instock: ${model.products[i].instock}</tt>
-                </div>
-            </div> </hr>`
+            html += `<div class="productBox">
+                        <div class="productBoximg">
+                            <img class="productBoximg" src="${model.products[i].image}"/>
+                        </div> <hr/>
+                        <div Class="productInfo">
+                            ${model.products[i].name} <br>
+                            <tt>price: ${model.products[i].price}kr<tt> <button onclick="addToCart(${i})"> Buy</button></br>
+                            <tt> instock: ${model.products[i].instock}</tt>
+                        </div>
+                    </div>`
     }
     html += `       </div>
                 </div>`;
