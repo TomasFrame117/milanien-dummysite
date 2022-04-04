@@ -2,18 +2,18 @@ show();
 function show(){
     let html = '';
 
-    html += `
+    html += /*html*/ `
         <div class="navBarStyle"> ${navBar()}</div> <hr/>
         ${model.view}
     `
     webSite.innerHTML = html;
 
-    html+=`<div class="navBarStyle"> ${footerBar()}</div>`
+    html+=/*html*/`<div class="navBarStyle"> ${footerBar()}</div>`
 }
 
 function footerBar() {
 
-    return`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+    return /*html*/`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
                
     <div class="text-center p-3 border-top border-white">
         © 2022 Copyright: MelanienGroup As This site is just a dummy and most not be mistaken for a real web shop!
@@ -25,7 +25,7 @@ function footerBar() {
 }
 
 function navBar(){
-    return `
+    return/*html*/ `
         
         <div class="navBarStyle">
             <button class="navBarButton" onclick="changePage('home')">Home</button>
@@ -53,12 +53,12 @@ function updateView(){
 }
 
 function viewHomePage(){
-     html=`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
+     html= /*html*/`<h2>Welcome to Milanien! Calmest styles in fashion!</h2>
      `
-    html += `<div class="slideShowBox">
+    html += /*html*/`<div class="slideShowBox">
                 <img class="slideShowPic" src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/UP.gif?raw=true" name="slide" style="width:100%"/>
             </div>`
-    html += `<div class="catagoryBox">
+    html += /*html*/`<div class="catagoryBox">
                 <div class="genderBox">
                     <H1 class="categoryName" style="bold" onclick="viewShopPage('him')">him<h1>
                     <img class="imggenderbox" src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/him.png?raw=true" alt="card img cap"/>
@@ -70,15 +70,24 @@ function viewHomePage(){
                 
             </div>`
 
+    html += /*html*/`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+               
+            <div class="text-center p-3 border-top border-white">
+                    © 2022 Copyright: MelanienGroup As
+                    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    </div>
+
+                    </footer>`
+
      model.view = html;
     show();
 }
 
 
 function viewAboutusPage(){
-    html=`<h1>hi</h1>`
+    html= /*html*/ `<h1>hi</h1>`
 
-    html +=`<div class="container-fluid p-4 text-black text-center">
+    html += /*html*/`<div class="container-fluid p-4 text-black text-center">
     <h1>Have a Milanien Day</h1>
     <img src="https://github.com/TomasFrame117/milanien-dummysite/blob/main/bilder/Promo/UP2.gif?raw=true" style="width:70%"/>
   </div>
@@ -103,7 +112,7 @@ function viewAboutusPage(){
     </div>
   </div>`
 
-  html += `<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+  html += /*html*/`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
                
                 <div class="text-center p-3 border-top border-white">
       © 2022 Copyright: MelanienGroup As
@@ -117,48 +126,53 @@ function viewAboutusPage(){
 }
 
 function viewShopPage(gender){
-    let html = `<div class="product">
+    let html = /*html*/ `<div class="product">
                     <div class="productcard">`;
     for(let i = 0; i < model.products.length; i++){
        
             //modulus
-            html += `<div class="productBox">
+            html += /*html*/`<div class="productBox">
                         <div class="productBoximg">
                             <img class="productBoximg" src="${model.products[i].image}"/>
-                        </div> <hr/>
+                        </div> <br/>
                         <div Class="productInfo">
                             ${model.products[i].name} <br>
-                            <tt>price: ${model.products[i].price}kr<tt> <button onclick="addToCart(${i})"> Buy</button></br>
-                            <tt> instock: ${model.products[i].instock}</tt>
+                            <p>price: ${model.products[i].price}kr<p> <button onclick="addToCart(${i})"> Buy</button><br/>
+                            <p> instock: ${model.products[i].instock}</p><hr/>
                         </div>
                     </div>`
     }
-    html += `       </div>
+    html +=/*html*/ `    </div>
                 </div>`;
+    
+            html += /*html*/`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+               
+                <div class="text-center p-3 border-top border-white">
+      © 2022 Copyright: MelanienGroup As
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+
+    </footer>`
     model.view = html;
     show();
 }
 
 function viewCartPage(){
-    html =`<h2>Shoping Cart</h2>
-    
-    `
+    html =/*html*/`<h2>Shoping Cart</h2>`
     model.totalprice = 0;
 
     for(let i = 0; i<model.shopingcart.length; i++) {
-        html +=` <br>item: ${model.shopingcart[i].name}<br/>
-        price: ${model.shopingcart[i].price}
-        
-        `
+        html +=/*html*/` <br>item: ${model.shopingcart[i].name}<br/>
+        price: ${model.shopingcart[i].price}`
         model.totalprice += model.shopingcart[i].price;
     }
 
-    html +=`<hr/>total items: ${model.totalitems} <span> total price: ${model.totalprice}kr</span><br/>`
+    html +=/*html*/`<hr/>total items: ${model.totalitems} <span> total price: ${model.totalprice}kr</span><br/>`
 
-    html += `<hr/>
+    html += /*html*/`<hr/>
             <button onclick="GoToCheckOut()">Check Out</button>`
     
-            html += `<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
+            html += /*html*/`<footer class="text-center text-lg-start border border-black mt-xl-5 pt4">
                
                         <div class="text-center p-3 border-top border-white">
                             © 2022 Copyright: MelanienGroup As This site is just a dummy and most not be mistaken for a real web shop!
@@ -169,4 +183,14 @@ function viewCartPage(){
 
     model.view= html;
     show();
+}
+
+function GoToCheckOut(){
+    html=/*html*/`<div class="container-fluid p-4 text-black text-center">
+                        <input type="text" placeholder=""><br/>
+                        <input type="text" placeholder=""><br/>
+                        <input type="text" placeholder=""><br/>
+                        <input type="text" placeholder=""><br/>
+                    </div>`
+    updateView();
 }
